@@ -2,7 +2,6 @@ import discord
 import op
 import author as writers
 import finance
-import help as halp
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='>')
