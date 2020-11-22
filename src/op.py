@@ -3,18 +3,18 @@ commands = []
 def handleCommand(arguments):
     """Arguments should come in the form of a list of strings."""
     if len(arguments) > 1:
-        return constructMultiQueryURL(argumens[1:])
+        return _constructMultiQueryURL(argumens)
     elif len(arguments) == 1:
-        return constructSingleSummonerURL(arguments[0])
+        return _constructSingleSummonerURL(arguments[0])
     else:
         return "Need at least one summonername."
         
 
-def constructSingleSummonerURL(name):
+def _constructSingleSummonerURL(name):
     """Takes a summonername and returns its op.gg profile."""
     return "https://euw.op.gg/summoner/userName=" + name.lower()
 
-def constructMultiQueryURL(names):
+def _constructMultiQueryURL(names):
     """Takes a list of names and creates a multiquery for their
     summonernames."""
     url = "https://euw.op.gg/multi/query="
