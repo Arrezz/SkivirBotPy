@@ -2,12 +2,17 @@ import discord
 import op
 import author as writers
 import finance
+import help as halp
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='>')
 
+#Defining the client secret
+
 with open('../secret.txt') as f:
     token = f.readline()
+
+#Defining all the commands, see individual command files for details
 
 @bot.command()
 async def ping(ctx):
@@ -24,5 +29,12 @@ async def author(ctx):
 @bot.command()
 async def boats(ctx, *args):
     await ctx.send(finance.handleCommand(args))
+
+@bot.command()
+async def help(ctx, *args):
+    await ctx.send(help.handleCommand(args))
+
+
+print('Woo boy we running')
 
 bot.run(token)

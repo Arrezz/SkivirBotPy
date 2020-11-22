@@ -4,5 +4,5 @@ def handleCommand(arguments):
     for arg in arguments:
         toPrint = yf.Ticker(arg)
         hist = toPrint.history(period="1d")
-        res += hist
+        res = res + str(hist) + '\n'
     return res
