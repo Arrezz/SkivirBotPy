@@ -11,7 +11,7 @@ with open('secret.txt') as f:
 async def ping(ctx):
     await ctx.send('pong')
 
-@bot.command
+@bot.command()
 async def opgg(ctx, *args):
     await ctx.send(op.handleCommand(args))
 
