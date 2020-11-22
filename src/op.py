@@ -3,7 +3,7 @@ commands = []
 def handleCommand(arguments):
     """Arguments should come in the form of a list of strings."""
     if len(arguments) > 1:
-        return _constructMultiQueryURL(argumens)
+        return _constructMultiQueryURL(arguments)
     elif len(arguments) == 1:
         return _constructSingleSummonerURL(arguments[0])
     else:
