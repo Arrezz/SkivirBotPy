@@ -30,10 +30,6 @@ async def author(ctx):
 async def boats(ctx, *args):
     await ctx.send(finance.handleCommand(args))
 
-@bot.command()
-async def help(ctx, *args):
-    await ctx.send(help.handleCommand(args))
-
 
 print('Woo boy we running')
 
